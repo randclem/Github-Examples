@@ -8,6 +8,7 @@ jobs:
       - name: "Hello World"
         run:  echo "Hello World!"
   goodbye-moon:
+    if: github.repository == 'octocat/octo-kit'
     runs-on: ubuntu-latest
     steps:
       - name: "Goodbye Moon"
