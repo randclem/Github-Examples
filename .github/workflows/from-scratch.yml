@@ -7,5 +7,16 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps: 
-      - name: "Hello world"
-        run: echo "Hello World!"
+      - name: 'Hello world'
+        run: echo 'Hello World!''
+      - name: 'Run if has Ho'
+        if: contains('Bass Hound', 'Ho')
+        run: echo 'Bass Hound'
+      - name: 'Run if it starts with Bass'
+        if: startsWith('Bass Hound', 'Bass')
+        run: echo 'Behs'
+      - name: 'Run if it ends with Bass'
+        if: endsWith('Kiss my Bass', 'Bass')
+        run: echo 'Kiss my Behs!'
+      - name: 'Format Bass'
+        run: echo ${{ format('Say {0} {1} {2}', 'hello', 'to', 'my little behs') }}
