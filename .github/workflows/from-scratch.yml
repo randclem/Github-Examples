@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: 'Hello world'
-        run: echo 'Hello World!''
+        run: echo 'Hello World!'
       - name: 'Run if has Ho'
         if: contains('Bass Hound', 'Ho')
         run: echo 'Bass Hound'
