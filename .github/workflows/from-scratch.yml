@@ -20,3 +20,9 @@ jobs:
         run: echo 'Kiss my Behs!'
       - name: 'Format Bass'
         run: echo ${{ format('Say {0} {1} {2}', 'hello', 'to', 'my little behs') }}
+      - name: 'is successful?'
+        if: ${{ success() }}
+        run: echo "success"
+      - name: 'is fail'
+        if: ${{ failure() }}
+        run: echo "failed"
